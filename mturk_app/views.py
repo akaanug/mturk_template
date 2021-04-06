@@ -55,9 +55,8 @@ def home(request):
 def post_data(request):
     data = request.POST.get('data', None)
     worker_id = request.POST.get('workerId', None)
-    game_type = request.POST.get("gameType")
 
-    print("Finished, submitting to s3. ID: ", worker_id, " game type: ", game_type)
+    print("Finished, submitting to s3. ID: ", worker_id, " data: ", data)
 
     from datetime import datetime
     dt = datetime.today().strftime('%Y-%m-%d=%H:%M:%S')
@@ -71,7 +70,7 @@ def post_data(request):
 
     final_data = json.loads(data)
 
-    filename = game_type + "/" + dt + "_" + worker_id + ".json"
+    filename = data + "/" + dt + "_" + worker_id + ".json"
 
     print("writing ", filename)
 
@@ -96,7 +95,6 @@ def post_data(request):
         "assignment_id": request.POST.get("assignmentId"),
         "worker_id": request.POST.get("workerId"),
         "hit_id": request.POST.get("hitId"),
-        "game_type": request.POST.get("gameType"),
     }
 
     save_into_db(context)
