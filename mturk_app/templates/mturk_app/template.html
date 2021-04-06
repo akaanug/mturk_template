@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Example static file import: <script type="text/javascript" src='{% static "js/example.js" %}'> </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Template Page</title>
+</head>
+<body>
+
+<!-- mturk form  -->
+
+<form id = "finish" action="{% url 'post_data' %}" method="POST" >
+    {% csrf_token %}
+    <label for="data">Send Data:</label><input type="text" id = "data" name="data" value="" />
+    <input id="assignmentId" name="assignmentId" type="hidden" value="{{ assignment_id }}" />
+	<input id="workerId" name="workerId" type="hidden" value="{{ worker_id }}" />
+	<input id="hitId" name="hitId" type="hidden" value="{{ hit_id }}" />
+</form>
+
+<!-- end of mturk form  -->
+
+
+<script>
+</script>
+
+
+<style>
+</style>
+
+</body>
+</html>
