@@ -20,11 +20,15 @@ Here are the instructions for running this Django application in Heroku server a
     AWS_SECRET_KEY: Secret access key of your IAM user.
     BUCKET_NAME: Name of your S3 bucket.
     SECRET_KEY: Secret key for Django. You can generate one here: https://djecrety.ir/
+    HEROKU_HEADER: i.e. mturk-template.herokuapp.com 
 
 5- Link your GitHub account with your Heroku app and deploy the server.
+
 6- Through Heroku CLI, run: 
 python manage.py makemigrations
 python manage.py migrate
 in order to setup the database for our participant model.
+
 7- Once your server is started, you can create/delete the mturk task by running mturk.py file. Make changes according to your needs.
+
 8- Do not forget to set debug to False in settings.py in production and change DEV_ENVIRONMENT_BOOLEAN to False, to run on real mturk instead of the sandbox.

@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = True
 
 # Add the URL here.
-ALLOWED_HOSTS = ['127.0.0.1', os.environ['HEROKU_URL']]
+ALLOWED_HOSTS = ['127.0.0.1', os.environ['HEROKU_HEADER']]
 
 # For mturk:
 X_FRAME_OPTIONS = 'ALLOWALL'
