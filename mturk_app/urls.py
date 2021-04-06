@@ -20,5 +20,7 @@ from . import views
 urlpatterns = [
 
     path('', views.home, name='home'),
+    path('post_data', views.post_data, name='post_data'),
+
 
 ]
