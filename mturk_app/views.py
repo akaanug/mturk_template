@@ -68,7 +68,7 @@ def post_data(request):
     AWS_ACCESS_KEY = aws_id
     AWS_SECRET_KEY = aws_secret_key
 
-    final_data = json.loads(data)
+    final_data = data
 
     filename = data + "/" + dt + "_" + worker_id + ".json"
 
