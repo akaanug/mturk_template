@@ -70,7 +70,7 @@ def post_data(request):
 
     final_data = data
 
-    filename = data + "/" + dt + "_" + worker_id + ".json"
+    filename = dt + "_" + worker_id + ".json"
 
     print("writing ", filename)
 
