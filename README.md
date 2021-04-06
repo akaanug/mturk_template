@@ -25,8 +25,8 @@ Here are the instructions for running this Django application in Heroku server a
 5- Link your GitHub account with your Heroku app and deploy the server.
 
 6- Through Heroku CLI, run: 
-python manage.py makemigrations
-python manage.py migrate
+heroku run python manage.py makemigrations
+heroku run python manage.py migrate
 in order to setup the database for our participant model.
 
 7- Once your server is started, you can create/delete the mturk task by running mturk.py file. Make changes according to your needs.
