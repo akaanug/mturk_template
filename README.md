@@ -5,8 +5,8 @@
 This repository is a template for mturk external questions that saves the participant data into Postgresql database and AWS S3 Bucket.
 Here are the instructions for running this Django application in Heroku server and connecting it to mturk:
 
-<b>1-</b> Set up an Heroku application: Create a new app through Heroku website. Open your app and go to settings. Through there, add heroku/python as a buildpack.
-    <b>1.1-</b> To use Heroku's default postgres database (easy to configure), go to resources and add Heroku Postgres add-on.
+<b>1-</b> Set up an Heroku application: Create a new app through Heroku website. Open your app and go to settings. Through there, add heroku/python as a buildpack.\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>1.1-</b> To use Heroku's default postgres database (easy to configure), go to resources and add Heroku Postgres add-on.
 
 <b>2-</b> Clone/Fork this repository and make sure you push it to GitHub after you have made the changes you need. We will use that repository to host it on Heroku.
 
@@ -32,9 +32,9 @@ Here are the instructions for running this Django application in Heroku server a
 
 <b>5-</b> Link your GitHub account with your Heroku app and deploy the server.
 
-<b>6-</b> Through Heroku CLI, run: 
-heroku run python manage.py makemigrations
-heroku run python manage.py migrate
+<b>6-</b> Through Heroku CLI, run: \
+`heroku run python manage.py makemigrations`\
+`heroku run python manage.py migrate`\
 in order to setup the database for our participant model.
 
 <b>7-</b> Once your server is started, you can create/delete the mturk task by running mturk.py file. Make changes according to your needs.
